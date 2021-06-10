@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin/Screens/Signup/Signup_screen.dart';
 import 'package:flutter_signin/components/already_have_an_account.dart';
 import 'package:flutter_signin/components/rounded_button.dart';
 import 'package:flutter_signin/components/rounded_input_field.dart';
@@ -45,7 +46,16 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
             )
           ],
         ),
